@@ -875,7 +875,7 @@
                 </div>
             </div>
             <div class="speech-bubble" id="speechBubble">
-                Hello there! I'm Whiskers. Let's go through this feedback form together!
+                Hello there! I'm Simran. Let's go through this feedback form together!
             </div>
         </div>
     </div>
@@ -993,7 +993,7 @@
     setTimeout(() => {
       speechBubble.classList.add('active');
       const messages = [
-        "Hello there! I'm Whiskers. Let's go through this feedback form together!",
+        "Hello there! I'm Simran. Let's go through this feedback form together!",
         "First, I'd like to know some basic information about you and your child.",
         "This will help us create a better experience for families like yours!"
       ];
@@ -1067,7 +1067,7 @@
         };
 
         // 4) POST to your backend
-        const res = await fetch('http://localhost:3000/api/submit-feedback', {
+        const res = await fetch('/api/submit-feedback', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
