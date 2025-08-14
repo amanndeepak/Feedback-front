@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Feedback: Social Media & Professional Development</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #7209b7;
+            --light-bg: #f0f8ff;
+            --white: #ffffff;
+            --text-color: #2b2d42;
+            --light-text: #8d99ae;
+            --sky-blue: #87CEEB;
+            --cloud-white: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text x='0' y='28' font-size='28'>🐀</text></svg>"), auto;
+
+             /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><path d='M10,8 Q15,5 20,8 Q25,11 22,16 Q20,20 15,22 Q10,20 8,16 Q5,11 10,8' fill='gray'/><circle cx='12' cy='12' r='2' fill='black'/><circle cx='18' cy='12' r='2' fill='black'/><path d='M15,18 Q16,20 17,18' stroke='black' fill='none'/><path d='M22,8 L25,5 M25,8 L22,5' stroke='gray' stroke-width='2'/></svg>"), auto; */
+            /* cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%234361ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>'), auto; */
+        }
+        
+        
+        body {
+            background: linear-gradient(to bottom, var(--sky-blue), #e0f7fa);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Cloud animations */
+        .cloud {
+            position: absolute;
+            background: var(--cloud-white);
+            border-radius: 50%;
+            opacity: 0.8;
+            z-index: 0;
+            animation: floatCloud linear infinite;
+            filter: blur(2px);
+        }
+        
+        @keyframes floatCloud {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(50px) translateY(-10px); }
+            100% { transform: translateX(100px) translateY(0); }
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 25px 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transform: translateZ(20px);
+        }
+        
+        .disclaimer {
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 10px;
+            opacity: 0.9;
+            transform: translateZ(15px);
+        }
+        
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 180px;
+            transform-style: preserve-3d;
+        }
+        
+        .form-section {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            position: relative;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transform-style: preserve-3d;
+        }
+        
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+            border-radius: 15px;
+            z-index: -1;
+        }
+        
+        .form-section:hover {
+            transform: translateY(-5px) rotateX(1deg) rotateY(1deg);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+            font-size: 22px;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background-color: rgba(255,255,255,0.8);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        .input-field:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        textarea.input-field {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .option-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
+        
+        .option-item input[type="checkbox"],
+        .option-item input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            margin-right: 12px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .option-item input[type="radio"] {
+            border-radius: 50%;
+        }
+        
+        .option-item input[type="checkbox"]:checked,
+        .option-item input[type="radio"]:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .option-item input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .option-item input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .option-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .other-specify {
+            margin-left: 32px;
+            margin-top: 8px;
+            width: calc(100% - 32px);
+        }
+        
+        .name-fields {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .name-fields {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 40px auto;
+            width: 250px;
+            font-weight: 500;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Cat Animation */
+        .cat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 180px;
+            height: 220px;
+            z-index: 100;
+            transition: all 0.3s;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .cat {
+            width: 100%;
+            height: 88%;
+            background-image: url('image/tomm.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            position: relative;
+            animation: bounce 2s infinite ease-in-out;
+            transform: translateZ(0);
+        }
+        
+        .speech-bubble {
+            position: absolute;
+            bottom: 200px;
+            right: 180px;
+            width: 280px;
+            background: var(--white);
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: scale(0.5) translateZ(0);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-size: 15px;
+            line-height: 1.5;
+            transform-style: preserve-3d;
+        }
+        
+        .speech-bubble.active {
+            opacity: 1;
+            transform: scale(1) translateZ(20px);
+        }
+        
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 30px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: var(--white) transparent;
+        }
+        
+        .eyes {
+            position: absolute;
+            top: 70px;
+            left: 75px;
+            width: 48px;
+            height: 18px;
+            display: flex;
+            justify-content: space-between;
+            transform-style: preserve-3d;
+        }
+        
+        .eye {
+            width: 12px;
+            height: 18px;
+            background: #333;
+            border-radius: 50%;
+            animation: blink 4s infinite;
+            transform: translateZ(10px);
+        }
+        
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) translateZ(0); }
+            50% { transform: translateY(-15px) translateZ(10px); }
+        }
+        
+        @keyframes blink {
+            0%, 45%, 55%, 100% { transform: scaleY(1); }
+            48%, 52% { transform: scaleY(0.1); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Progress indicator */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0%;
+            transition: width 0.5s ease;
+            border-radius: 3px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .form-section {
+                padding: 25px 20px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+            
+            .cat-container {
+                width: 120px;
+                height: 160px;
+            }
+            
+            .eyes {
+                top: 50px;
+                left: 40px;
+                width: 40px;
+            }
+            
+            .eye {
+                width: 10px;
+                height: 15px;
+            }
+            
+            .speech-bubble {
+                bottom: 150px;
+                right: 130px;
+                width: 220px;
+                font-size: 14px;
+                padding: 15px;
+            }
+            
+            .submit-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cat-container {
+                width: 100px;
+                height: 140px;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .eyes {
+                top: 40px;
+                left: 30px;
+                width: 40px;
+            }
+            
+            .speech-bubble {
+                bottom: 130px;
+                right: 110px;
+                width: 180px;
+                font-size: 13px;
+            }
+            
+            .input-field {
+                padding: 12px;
+            }
+            
+            .option-item {
+                padding: 6px 0;
+            }
+        }
+    </style>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <!-- Floating Clouds -->
+    <div class="cloud" style="width: 120px; height: 40px; top: 10%; left: 5%; animation-duration: 30s;"></div>
+    <div class="cloud" style="width: 150px; height: 50px; top: 25%; left: 60%; animation-duration: 40s;"></div>
+    <div class="cloud" style="width: 100px; height: 35px; top: 40%; left: 20%; animation-duration: 35s;"></div>
+    <div class="cloud" style="width: 180px; height: 60px; top: 15%; left: 70%; animation-duration: 50s;"></div>
+    <div class="cloud" style="width: 130px; height: 45px; top: 65%; left: 10%; animation-duration: 45s;"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Gurnirmal Technology</h1>
+            <p>Parent Feedback Form</p>
+            <p class="disclaimer">All responses are confidential and will be used only for research purposes.</p>
+        </header>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <form class="form-container" id="formContainer">
+            <!-- Section 1: About You and Your Child -->
+            <div class="form-section" id="section1">
+                <h2 class="section-title">About You and Your Child</h2>
+                
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label for="parentName">Your Name:</label>
+                        <input type="text" id="parentName" name="parentName" class="input-field" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="childName">Child's Name:</label>
+                        <input type="text" id="childName" name="childName" class="input-field" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="childAge">Child's age:</label>
+                    <input type="number" id="childAge" name="childAge" min="1" max="18" class="input-field" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="schoolGrade">School grade/class:</label>
+                    <input type="text" id="schoolGrade" name="schoolGrade" class="input-field" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Your relationship to the child:</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="parent" name="relationship" value="Parent" required>
+                            <label for="parent">Parent</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="guardian" name="relationship" value="Guardian">
+                            <label for="guardian">Guardian</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="otherRelationship" name="relationship" value="Other">
+                            <label for="otherRelationship">Other (please specify):</label>
+                        </div>
+                        <input type="text" id="otherRelationshipSpecify" name="otherRelationshipSpecify" class="input-field other-specify">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 2: Social Media Usage -->
+            <div class="form-section" id="section2">
+                <h2 class="section-title">Social Media Usage</h2>
+                
+                <div class="form-group">
+                    <label>How often does your child use social media apps?</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="rarely" name="usageFrequency" value="Rarely" required>
+                            <label for="rarely">Rarely</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="sometimes" name="usageFrequency" value="Sometimes">
+                            <label for="sometimes">Sometimes</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="daily" name="usageFrequency" value="Daily">
+                            <label for="daily">Daily</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="multipleTimes" name="usageFrequency" value="Multiple times a day">
+                            <label for="multipleTimes">Multiple times a day</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>How many hours does your child spend on social media per day (on average)?</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="lessThan1" name="hoursPerDay" value="Less than 1 hour" required>
+                            <label for="lessThan1">Less than 1 hour</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="1to2" name="hoursPerDay" value="1–2 hours">
+                            <label for="1to2">1–2 hours</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="2to4" name="hoursPerDay" value="2–4 hours">
+                            <label for="2to4">2–4 hours</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="moreThan4" name="hoursPerDay" value="More than 4 hours">
+                            <label for="moreThan4">More than 4 hours</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>What social media platforms does your child use most? (Select all that apply)</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="checkbox" id="instagram" name="platforms" value="Instagram">
+                            <label for="instagram">Instagram</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="whatsapp" name="platforms" value="WhatsApp">
+                            <label for="whatsapp">WhatsApp</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="facebook" name="platforms" value="Facebook">
+                            <label for="facebook">Facebook</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="snapchat" name="platforms" value="Snapchat">
+                            <label for="snapchat">Snapchat</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="youtube" name="platforms" value="YouTube">
+                            <label for="youtube">YouTube</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="otherPlatform" name="platforms" value="Other">
+                            <label for="otherPlatform">Other (please specify):</label>
+                        </div>
+                        <input type="text" id="otherPlatformSpecify" name="otherPlatformSpecify" class="input-field other-specify">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3: Concerns & Expectations -->
+            <div class="form-section" id="section3">
+                <h2 class="section-title">Concerns & Expectations</h2>
+                
+                <div class="form-group">
+                    <label>What are your biggest concerns regarding your child's current social media usage? (Select all that apply)</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="checkbox" id="privacy" name="concerns" value="Privacy/Safety">
+                            <label for="privacy">Privacy/Safety</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="cyberbullying" name="concerns" value="Cyberbullying">
+                            <label for="cyberbullying">Cyberbullying</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="wastingTime" name="concerns" value="Wasting time">
+                            <label for="wastingTime">Wasting time</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="inappropriateContent" name="concerns" value="Inappropriate content">
+                            <label for="inappropriateContent">Inappropriate content</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="lackOfValue" name="concerns" value="Lack of educational/professional value">
+                            <label for="lackOfValue">Lack of educational/professional value</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="otherConcern" name="concerns" value="Other">
+                            <label for="otherConcern">Other (please specify):</label>
+                        </div>
+                        <input type="text" id="otherConcernSpecify" name="otherConcernSpecify" class="input-field other-specify">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Would you prefer your child to engage with an app that connects them with like-minded peers and helps develop professional skills?</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="yesPref" name="preference" value="Yes" required>
+                            <label for="yesPref">Yes</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="noPref" name="preference" value="No">
+                            <label for="noPref">No</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="maybePref" name="preference" value="Maybe">
+                            <label for="maybePref">Maybe</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Which professional skills would you like your child to develop using such an app? (Select all that apply)</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="checkbox" id="communication" name="skills" value="Communication">
+                            <label for="communication">Communication</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="leadership" name="skills" value="Leadership">
+                            <label for="leadership">Leadership</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="teamwork" name="skills" value="Teamwork">
+                            <label for="teamwork">Teamwork</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="technical" name="skills" value="Technical/IT skills">
+                            <label for="technical">Technical/IT skills</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="creativity" name="skills" value="Creativity">
+                            <label for="creativity">Creativity</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="problemSolving" name="skills" value="Problem solving">
+                            <label for="problemSolving">Problem solving</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="otherSkill" name="skills" value="Other">
+                            <label for="otherSkill">Other (please specify):</label>
+                        </div>
+                        <input type="text" id="otherSkillSpecify" name="otherSkillSpecify" class="input-field other-specify">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4: Parental Control & Progress Tracking -->
+            <div class="form-section" id="section4">
+                <h2 class="section-title">Parental Control & Progress Tracking</h2>
+                
+                <div class="form-group">
+                    <label>How important is it for you to monitor or control your child's social media usage?</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="veryImportant" name="monitorImportance" value="Very important" required>
+                            <label for="veryImportant">Very important</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="somewhatImportant" name="monitorImportance" value="Somewhat important">
+                            <label for="somewhatImportant">Somewhat important</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="notImportant" name="monitorImportance" value="Not important">
+                            <label for="notImportant">Not important</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Would you use features to track your child's progress, time spent, and activities on the app?</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="yesTrack" name="trackProgress" value="Yes" required>
+                            <label for="yesTrack">Yes</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="noTrack" name="trackProgress" value="No">
+                            <label for="noTrack">No</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="maybeTrack" name="trackProgress" value="Maybe">
+                            <label for="maybeTrack">Maybe</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>What features would make you feel secure and confident in letting your child use this app? (Select all that apply)</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="checkbox" id="dashboard" name="securityFeatures" value="Parental control dashboard">
+                            <label for="dashboard">Parental control dashboard</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="timeLimits" name="securityFeatures" value="Time limits">
+                            <label for="timeLimits">Time limits</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="reports" name="securityFeatures" value="Progress reports">
+                            <label for="reports">Progress reports</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="safeChat" name="securityFeatures" value="Safe chat/closed community">
+                            <label for="safeChat">Safe chat/closed community</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="ageVerification" name="securityFeatures" value="Age verification">
+                            <label for="ageVerification">Age verification</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="checkbox" id="otherFeature" name="securityFeatures" value="Other">
+                            <label for="otherFeature">Other (please specify):</label>
+                        </div>
+                        <input type="text" id="otherFeatureSpecify" name="otherFeatureSpecify" class="input-field other-specify">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 5: Feedback & Suggestions -->
+            <div class="form-section" id="section5">
+                <h2 class="section-title">Feedback & Suggestions</h2>
+                
+                <div class="form-group">
+                    <label for="motivation">What do you think would motivate your child to use an app for professional development?</label>
+                    <textarea id="motivation" name="motivation" class="input-field" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="suggestions">Do you have any concerns or suggestions about this idea?</label>
+                    <textarea id="suggestions" name="suggestions" class="input-field"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Would you like to be contacted for further discussion or updates about this app?</label>
+                    <div class="options-container">
+                        <div class="option-item">
+                            <input type="radio" id="yesContact" name="contact" value="Yes" required>
+                            <label for="yesContact">Yes (please provide email/phone):</label>
+                        </div>
+                        <input type="text" id="contactInfo" name="contactInfo" class="input-field other-specify">
+                        <div class="option-item">
+                            <input type="radio" id="noContact" name="contact" value="No">
+                            <label for="noContact">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="feedbackForm">Submit Feedback</button>
+        </form>
+        
+        <!-- Cat Animation -->
+        <div class="cat-container">
+            <div class="cat">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+            </div>
+            <div class="speech-bubble" id="speechBubble">
+                Hello there! I'm Whiskers. Let's go through this feedback form together!
+            </div>
+        </div>
+    </div>
+    
+<script>
+  // ---- Ensure jsPDF is loaded via these tags in <head> (keep what you had) ----
+ 
+  // Simple cloud generator
+  function createClouds() {
+    const cloudCount = 8;
+    const body = document.body;
+    for (let i = 0; i < cloudCount; i++) {
+      const cloud = document.createElement('div');
+      cloud.className = 'cloud';
+      const width = Math.floor(Math.random() * 100) + 80;
+      const height = width * 0.3;
+      const top = Math.floor(Math.random() * 80);
+      const left = Math.floor(Math.random() * 80);
+      const duration = Math.floor(Math.random() * 40) + 30;
+      cloud.style.width = `${width}px`;
+      cloud.style.height = `${height}px`;
+      cloud.style.top = `${top}%`;
+      cloud.style.left = `${left}%`;
+      cloud.style.animationDuration = `${duration}s`;
+      cloud.style.zIndex = '0';
+      cloud.style.filter = `blur(${Math.random() * 3}px)`;
+      body.appendChild(cloud);
+    }
+  }
+
+  // Collect all form data (arrays for multi-selects)
+  function collectFormData() {
+    return {
+      parentName: document.getElementById('parentName').value || '',
+      childName: document.getElementById('childName').value || '',
+      childAge: document.getElementById('childAge').value || '',
+      schoolGrade: document.getElementById('schoolGrade').value || '',
+      relationship: document.querySelector('input[name="relationship"]:checked')?.value || '',
+      otherRelationship: document.getElementById('otherRelationshipSpecify').value || '',
+      usageFrequency: document.querySelector('input[name="usageFrequency"]:checked')?.value || '',
+      hoursPerDay: document.querySelector('input[name="hoursPerDay"]:checked')?.value || '',
+      platforms: Array.from(document.querySelectorAll('input[name="platforms"]:checked')).map(el => el.value),
+      concerns: Array.from(document.querySelectorAll('input[name="concerns"]:checked')).map(el => el.value),
+      preference: document.querySelector('input[name="preference"]:checked')?.value || '',
+      skills: Array.from(document.querySelectorAll('input[name="skills"]:checked')).map(el => el.value),
+      monitorImportance: document.querySelector('input[name="monitorImportance"]:checked')?.value || '',
+      trackProgress: document.querySelector('input[name="trackProgress"]:checked')?.value || '',
+      securityFeatures: Array.from(document.querySelectorAll('input[name="securityFeatures"]:checked')).map(el => el.value),
+      motivation: document.getElementById('motivation').value || '',
+      suggestions: document.getElementById('suggestions').value || '',
+      contact: document.querySelector('input[name="contact"]:checked')?.value || '',
+      contactInfo: document.getElementById('contactInfo').value || ''
+    };
+  }
+
+  // Build PDF as base64 using jsPDF + autoTable
+  function buildPdfBase64(formData) {
+    const { jsPDF } = window.jspdf;
+    const pdfDoc = new jsPDF();
+
+    // Header
+    pdfDoc.setFontSize(20);
+    pdfDoc.text('Gurnirmal Technology - Parent Feedback', 15, 20);
+    pdfDoc.setFontSize(12);
+    pdfDoc.text('Submitted on: ' + new Date().toLocaleString(), 15, 30);
+
+    // Table rows
+    const tableData = [
+      ['Section', 'Question', 'Response'],
+      ['About You and Your Child', 'Your Name', formData.parentName],
+      ['', "Child's Name", formData.childName],
+      ['', "Child's Age", formData.childAge],
+      ['', 'School Grade/Class', formData.schoolGrade],
+      ['', 'Relationship to Child', formData.relationship + (formData.otherRelationship ? ` (${formData.otherRelationship})` : '')],
+      ['Social Media Usage', 'Usage Frequency', formData.usageFrequency],
+      ['', 'Hours Per Day', formData.hoursPerDay],
+      ['', 'Platforms Used', formData.platforms.join(', ')],
+      ['Concerns & Expectations', 'Main Concerns', formData.concerns.join(', ')],
+      ['', 'Preference for Professional App', formData.preference],
+      ['', 'Desired Skills', formData.skills.join(', ')],
+      ['Parental Control', 'Monitoring Importance', formData.monitorImportance],
+      ['', 'Track Progress', formData.trackProgress],
+      ['', 'Security Features', formData.securityFeatures.join(', ')],
+      ['Feedback', 'Motivation Factors', formData.motivation],
+      ['', 'Suggestions', formData.suggestions],
+      ['Contact', 'Contact Preference', formData.contact + (formData.contactInfo ? ` (${formData.contactInfo})` : '')]
+    ];
+
+    pdfDoc.autoTable({
+      head: [tableData[0]],
+      body: tableData.slice(1),
+      startY: 40,
+      styles: { fontSize: 10, cellPadding: 5, overflow: 'linebreak' },
+      columnStyles: { 0: { fontStyle: 'bold', cellWidth: 50 }, 1: { cellWidth: 70 }, 2: { cellWidth: 'auto' } }
+    });
+
+    // Return pure base64 (no data: header)
+    return pdfDoc.output('datauristring').split(',')[1];
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Your existing UI wiring
+    createClouds();
+
+    const speechBubble = document.getElementById('speechBubble');
+    const formContainer = document.getElementById('formContainer'); // <-- THE form
+    const progressBar = document.getElementById('progressBar');
+    const sections = document.querySelectorAll('.form-section');
+    const totalSections = sections.length;
+
+    // Cat visible
+    setTimeout(() => { document.querySelector('.cat-container').style.opacity = '1'; }, 500);
+
+    // Intro messages
+    setTimeout(() => {
+      speechBubble.classList.add('active');
+      const messages = [
+        "Hello there! I'm Whiskers. Let's go through this feedback form together!",
+        "First, I'd like to know some basic information about you and your child.",
+        "This will help us create a better experience for families like yours!"
+      ];
+      let i = 0;
+      const id = setInterval(() => {
+        i++;
+        if (i < messages.length) speechBubble.textContent = messages[i];
+        else clearInterval(id);
+      }, 3000);
+    }, 1000);
+
+    // Section questions for scroll
+    const sectionQuestions = [
+      "First, tell me about yourself and your child. What are your names?",
+      "Now, let's talk about your child's social media habits.",
+      "What concerns do you have about current social media platforms?",
+      "How important are parental controls for your family?",
+      "Finally, we'd love to hear any suggestions you might have!"
+    ];
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY + 100;
+      let current = 0;
+      sections.forEach((section, index) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPosition >= top && scrollPosition < top + height) current = index;
+      });
+      progressBar.style.width = `${((current + 1) / totalSections) * 100}%`;
+      speechBubble.textContent = sectionQuestions[current];
+    });
+
+    // Cat click helper
+    document.querySelector('.cat-container').addEventListener('click', () => {
+      const msgs = [
+        "I'm here to help with any questions!",
+        "This form should take about 5 minutes to complete.",
+        "Your feedback will help improve the app for families!",
+        "Don't worry, all your answers are confidential.",
+        "Scroll down to see all the questions."
+      ];
+      speechBubble.textContent = msgs[Math.floor(Math.random() * msgs.length)];
+      setTimeout(() => {
+        const scrollPosition = window.scrollY + 100;
+        let current = 0;
+        sections.forEach((section, index) => { if (scrollPosition >= section.offsetTop) current = index; });
+        speechBubble.textContent = sectionQuestions[current];
+      }, 3000);
+    });
+
+    // ---------- ONE submit handler ONLY (attached to the FORM) ----------
+    formContainer.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const submitBtn = document.querySelector('.submit-btn') || document.querySelector('button[type="submit"]');
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting...'; }
+
+      try {
+        // 1) Gather data
+        const data = collectFormData();
+
+        // 2) Build PDF -> base64
+        const base64 = buildPdfBase64(data);
+        const filename = `ParentFeedback_${(data.parentName || 'Anonymous').replace(/\s+/g, '_')}.pdf`;
+
+        // 3) Choose recipient (if user said Yes + provided, use that; else default on server)
+        const payload = {
+          formData: data,
+          pdf: { filename, base64 },
+          to: (data.contact === 'Yes' && data.contactInfo) ? data.contactInfo : undefined
+        };
+
+        // 4) POST to your backend
+        const res = await fetch('http://localhost:3000/api/submit-feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.message || 'Submission failed');
+        }
+
+        // Success UI
+        speechBubble.textContent = "Thank you! Your feedback has been submitted and emailed.";
+        speechBubble.style.backgroundColor = "#4CAF50";
+        speechBubble.style.color = "white";
+
+        // Reset form
+        setTimeout(() => {
+          formContainer.reset();
+          window.scrollTo(0, 0);
+          progressBar.style.width = '0%';
+          speechBubble.style.backgroundColor = "";
+          speechBubble.style.color = "";
+          speechBubble.textContent = "Would you like to provide more feedback? I'm here to help!";
+        }, 2000);
+      } catch (err) {
+        console.error(err);
+        speechBubble.textContent = "Oops! Something went wrong. Please try again.";
+        speechBubble.style.backgroundColor = "#f44336";
+        speechBubble.style.color = "white";
+        setTimeout(() => {
+          speechBubble.style.backgroundColor = "";
+          speechBubble.style.color = "";
+          speechBubble.textContent = "Let's try submitting again.";
+        }, 2500);
+      } finally {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Feedback'; }
+      }
+    });
+    // ---------- END single submit handler ----------
+  });
+</script>
+
+</body>
+</html>
